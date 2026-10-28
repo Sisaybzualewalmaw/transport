@@ -1,0 +1,14 @@
+node_modules/
+build/
+target/
+dist/
+.next/
+dashboard/.next/
+.dart_tool/
+mobile/android/local.properties
+mobile/ios/Flutter/Generated.xcconfig
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example

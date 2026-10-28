@@ -1,0 +1,7 @@
+{
+  "name": "ET-Trans Woldia Transport Scheduling & Ticket Booking System",
+  "description": "Comprehensive national and regional transit scheduling, seat reservation, and dispatch system for Woldia Menehariya and the Ethiopian Transport Authority.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

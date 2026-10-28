@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@source "../../src";
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f1f5f9;
+  color: #0f172a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print\:p-0,
+  .print\:p-0 * {
+    visibility: visible;
+  }
+}

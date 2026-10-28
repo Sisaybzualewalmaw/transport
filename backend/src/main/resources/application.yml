@@ -1,0 +1,37 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/transport}
+    username: ${DB_USERNAME:transport}
+    password: ${DB_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: 0
+
+app:
+  booking:
+    expiry-sweep-ms: ${BOOKING_EXPIRY_SWEEP_MS:5000}
+    expiry-batch-size: ${BOOKING_EXPIRY_BATCH_SIZE:100}
+  dispatch:
+    manifest-sweep-ms: ${DISPATCH_MANIFEST_SWEEP_MS:30000}
+    manifest-batch-size: ${DISPATCH_MANIFEST_BATCH_SIZE:100}
+  payment:
+    webhook-secret: ${PAYMENT_WEBHOOK_SECRET:}
+    mock-enabled: ${MOCK_PAYMENT_ENABLED:false}
+  ticketing:
+    qr-secret-base64: ${TICKET_QR_SECRET_BASE64:${JWT_SECRET_BASE64}}
+  jwt:
+    secret-base64: ${JWT_SECRET_BASE64}
+    issuer: transport-api
+    expiration-seconds: ${JWT_TTL_SECONDS:900}
